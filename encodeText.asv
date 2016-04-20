@@ -1,0 +1,20 @@
+% Encode a string into a vector of numbers 0 through 26
+function encodedText = encodeText(imageOutput)
+%% Take in and get size of image matrix
+encryptionMatrix = imageOutput;
+[m,n] = size(encryptionMatrix);            %Gets size of encryption matrix
+%% If image not square, stop. Else continue w/ encryption
+if m~=n
+    encodedText = 'Error: Image must be square';
+else
+prompt = 'Input text to be encoded: ';     %Requests message
+originalMessage = input(prompt,'s');       %Stores message string
+toNumbers = double(originalMessage)-96;    %Message in numbers w/ a=1
+end
+%% Getting end result
+% Fixs message into a matrix that fits the encryption matrix
+encodingMatrix = vec2mat(toNumbers,
+encodedText;
+%% For decoding later
+toText = char(toNumbers+96);               %Takes vector, converts to text
+end
