@@ -11,8 +11,8 @@ prompt = 'Input text to be encoded: ';
 originalMessage = input(prompt,'s');  
 toNumbers = double(originalMessage)-96;   
 % Fix message into a matrix that fits the encryption matrix, then encrpyt
-encodingMatrix = double(vec2mat(toNumbers,m)+63);
-encryptionMatrix = double(encryptionMatrix);
+encodingMatrix = double(vec2mat(toNumbers,m) + 100);
+encryptionMatrix = double(encryptionMatrix)
 encodedTextMatrix = encodingMatrix * encryptionMatrix;
 encodedText = encodedTextMatrix;
 %% For decoding later

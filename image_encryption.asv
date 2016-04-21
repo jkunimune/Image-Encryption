@@ -1,0 +1,9 @@
+% image_encryption.m
+
+mat = image_to_matrix(input('Filename of encryption image: ','s'));
+
+output = encodeText(mat);
+disp(output/max(max()
+imshow(output)
+
+mat = do_SVD(mat, min(size(mat))/2);
