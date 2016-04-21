@@ -1,10 +1,10 @@
 %% Function takes encrypted text matrix and the image and uses them to
 % decode the message. Returns original message.
-function decodedText = decodeTextCopy(encodedText,imageOutput)
+function decodedText = decodeTextFixed(encodedText,imageOutput)
 % Take in stuff
 encryptionMatrix  = imageOutput;
 % Apply encryption matrix as inverse to encoded text to decode.
-transDecodedNumbers = encryptionMatrix^-1 * encodedText;
+transDecodedNumbers = double(encryptionMatrix)^-1 * double(encodedText);
 %Round off so ASCII letters can be applied
 decodedNumbers = round(transDecodedNumbers);
 % Get the decoded text matrix back into a proper vector form

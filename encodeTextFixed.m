@@ -1,6 +1,6 @@
 %% Encrypts a string into a matrix through multiplication by the encryption
 % matrix (i.e. the image)
-function encodedText = encodeTextSwitch(imageOutput)
+function encodedText = encodeTextFixed(imageOutput)
 % Take in and get size of image matrix
 encryptionMatrix = double(imageOutput);
 [m,n] = size(encryptionMatrix);            %Gets size of encryption matrix
