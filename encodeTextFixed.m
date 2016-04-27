@@ -9,7 +9,7 @@ encryptionMatrix = double(imageOutput);
 % Request message, store as string, convert to ASCII numbers
         prompt = 'Input text to be encoded: ';
         originalMessage = input(prompt,'s');  
-        toNumbers = (originalMessage)-96;   
+        toNumbers = to_num(originalMessage);   
 % Fix message into a matrix that fits the encryption matrix, then encrpyt
         encodingMatrix = double(vec2mat(toNumbers,m,32));
         transEncodingMatrix = double(transpose(encodingMatrix));

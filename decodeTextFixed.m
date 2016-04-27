@@ -10,5 +10,5 @@ decodedNumbers = round(transDecodedNumbers);
 % Get the decoded text matrix back into a proper vector form
 decodedNumbersVector = decodedNumbers(:);
 % Apply final conversion back into letters
-decodedText = char((decodedNumbersVector+96)');
+decodedText = to_char((decodedNumbersVector)');
 end
