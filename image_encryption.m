@@ -13,4 +13,4 @@ code = do_SVD(code, min(size(code))*.999);
 %imshow(uint8((code-min(min(code)))*255/(max(max(code))-min(min(code)))))
 
 decoded = decodeTextFixed(code, mat);
-disp(decoded)
+disp(['Decrypted text after SVD: ' decoded])

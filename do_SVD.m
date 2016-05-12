@@ -10,5 +10,5 @@ for i = 1:k
 end
 
 %res = uint8(round(res-1));  % reformat it back
-figure;
-imshow(res)                 % display it
+%figure;
+%imshow(res)                 % display it
